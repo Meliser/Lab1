@@ -8,7 +8,7 @@
     "start:dist": "serve -s dist",
     "build": "vue-cli-service build --mode production",
     "build:dev": "vue-cli-service build --mode development",
-    "test:unit": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
