@@ -27,4 +27,4 @@ jobs:
         # Your Heroku App Name
         app_name: 'vk-profile-lab'
         # Dokerfile path
-        dockerfile: './Dockerfile'
+        dockerfile: './'
