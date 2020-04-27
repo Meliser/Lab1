@@ -17,15 +17,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - run: ls
-    - name: Deploy Docker Image to Heroku App
-      uses: jctaveras/heroku-deploy@v1.1.0
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
+      id: heroku
+      uses: jctaveras/heroku-deploy@v1.0.0  # use the latest version of the action
       with:
-        # Email linked to your Heroku account
-        email: ${{ secrets.HEROKU_EMAIL }}
-        # Your Heroku API Key
-        api_key: ${{ secrets.HEROKU_API_KEY }}
-        # Your Heroku App Name
-        app_name: ${{ secrets.HEROKU_APP }}
-        # Dokerfile path
-        dockerfile: './Lab1'
+        email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
+        api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
+        app_name: ${{ secrets.HEROKU_APP_NAME }} # you aplication name
+        dockerfile: '' # set the path to the folder wher the Dokerfile is located
