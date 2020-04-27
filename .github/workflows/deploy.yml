@@ -21,10 +21,10 @@ jobs:
       uses: jctaveras/heroku-deploy@v1.1.0
       with:
         # Email linked to your Heroku account
-        email: 'mitya.korneev@mail.ru'
+        email: ${{ secrets.HEROKU_EMAIL }}
         # Your Heroku API Key
         api_key: ${{ secrets.HEROKU_API_KEY }}
         # Your Heroku App Name
-        app_name: 'vk-profile-lab'
+        app_name: ${{ secrets.HEROKU_APP }}
         # Dokerfile path
-        dockerfile: './'
+        dockerfile: ''
