@@ -28,4 +28,4 @@ jobs:
         # Your Heroku App Name
         app_name: ${{ secrets.HEROKU_APP }}
         # Dokerfile path
-        dockerfile: '.'
+        dockerfile: './Lab1'
