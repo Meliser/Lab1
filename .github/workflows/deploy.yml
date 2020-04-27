@@ -17,9 +17,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - run: |
-            cd ./
-            ls
+    - run: ls
     - name: Deploy Docker Image to Heroku App
       uses: jctaveras/heroku-deploy@v1.1.0
       with:
